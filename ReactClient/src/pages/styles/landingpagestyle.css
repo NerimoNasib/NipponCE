@@ -1,0 +1,107 @@
+.landing-banner {
+    background-image: url('https://hine6.com/wp-content/uploads/2019/07/toacera2gif-2.gif');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.landing-page-detail {
+    background-color: rgb(25, 25, 95);
+    color: white;
+    padding: 20px;
+    margin: 50px auto;
+    width: 90%;
+    transform: skew(-10deg);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.landing-page-detail h2, 
+.landing-page-detail p {
+    transform: skew(10deg);
+}
+
+.landing-banner h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.landing-banner p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.landing-banner .btn {
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 10px;
+    border: none !important;  
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.get-started-btn {
+    background-color: rgb(25, 25, 95) !important;
+    color: white !important;
+}
+
+.get-started-btn:hover {
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(25, 25, 95) !important;
+}
+
+.discord-btn {
+    background-color: white !important;
+    color: rgb(25, 25, 95) !important;
+}
+
+.discord-btn:hover {
+    background-color: rgb(25, 25, 95) !important;
+    color: white !important;
+}
+
+.landing-page-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card-banner {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 30px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-banner:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-banner h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: rgb(25, 25, 95);
+}
+
+.card-banner p {
+    font-size: 1rem;
+    color: rgb(50, 50, 50);
+}
