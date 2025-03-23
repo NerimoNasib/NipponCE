@@ -5,7 +5,7 @@ import "./styles/homepagestyles.css";
 
 function HomePage() {
   return (
-    <div>
+    <div className="bg-">
       <Navbar />
       <div className="d-flex">
         <Sidebar />
