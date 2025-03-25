@@ -29,6 +29,12 @@ namespace DotnetClient.Repositories
                 .WithMany()
                 .HasForeignKey(p => p.PostCategoryId)
                 .OnDelete(DeleteBehavior.Cascade);
+                
+            modelBuilder.Entity<User>()
+                .HasOne(u => u.UserRole)
+                .WithMany()
+                .HasForeignKey(u => u.UserRoleId)
+                .OnDelete(DeleteBehavior.Restrict); 
         }
     }
 }
