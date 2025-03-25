@@ -13,6 +13,22 @@ namespace DotnetClient.Repositories
             modelBuilder.Entity<LandingPageCardsModel>()
                 .ToTable("LandingPageCards")
                 .HasKey(c => c.Id);
+                
+            modelBuilder.Entity<UserPost>()
+                .ToTable("UserPosts")
+                .HasKey(p => p.Slug);
+
+            modelBuilder.Entity<UserPost>()
+                .HasOne(p => p.User)
+                .WithMany()
+                .HasForeignKey(p => p.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<UserPost>()
+                .HasOne(p => p.PostCategory)
+                .WithMany()
+                .HasForeignKey(p => p.PostCategoryId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

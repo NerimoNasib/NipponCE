@@ -1,4 +1,4 @@
-public class Category
+public class PostCategory
 {
     public int Id { get; set; }
     public string Name { get; set; }
