@@ -18,8 +18,10 @@ namespace DotnetClient.Repositories
 
         public async Task<T> GetByIdAsync(int id)
         {
-            return await _context.Set<T>().FindAsync(id);
+            var entity = await _context.Set<T>().FindAsync(id) ?? throw new KeyNotFoundException($"Entity with ID {id} not found.");
+            return entity;
         }
+
 
         public async Task AddAsync(T entity)
         {

@@ -1,3 +1,4 @@
+using DotnetClient.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace DotnetClient.Repositories
@@ -6,13 +7,6 @@ namespace DotnetClient.Repositories
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-        public DbSet<LandingPageCardsModel> LandingPageCards { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<LandingPageCardsModel>()
-                .ToTable("LandingPageCards")
-                .HasKey(c => c.Id);
-        }
+        public required DbSet<User> Users { get; set; }
     }
 }
